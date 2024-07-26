@@ -1,0 +1,107 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the heading */
+h1 {
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+
+/* Body styling */
+body {
+    text-align: center;
+    background-color: cadetblue;
+}
+
+/* Container for the message */
+.msg-container {
+    margin: 20px;
+}
+
+/* Styling the message element */
+#msg {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: inline-block;
+}
+.animate-winner {
+    animation: scaleUpDown 1s ease;
+}
+
+/* Container for the game board */
+.container {
+    height: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game board styling */
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.6vmin;
+    align-items: center;
+}
+
+/* Styling for each box */
+.box {
+    border-radius: 10px;
+    height: 18vmin;
+    width: 18vmin;
+    border: none;
+    background-color: azure;
+    font-size: 5vmin;
+    text-align: center;
+    line-height: 18vmin;
+    cursor: pointer;
+}
+
+/* Reset button styling */
+#resetbtn {
+    background-color:rgb(78, 137, 139);
+    color: rgb(0, 0, 0);
+    /* border: none; */
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Reset button hover effect */
+#resetbtn:hover {
+    background-color: rgb(64, 119, 121)
+}
+
+/* Reset button active effect */
+#resetbtn:active {
+    background-color: #fefefe;
+}
+
+@keyframes scaleUpDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up by 20% */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
