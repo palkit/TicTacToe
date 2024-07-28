@@ -2,7 +2,7 @@ let boxes = document.querySelectorAll(".box");
 let resetbtn = document.querySelector("#resetbtn");
 let msg = document.querySelector("#msg");
 
-let turn0 = true; //playerX , PlayerO
+let turn0 = true; // playerO , PlayerX
 let gameOver = false;
 let moveCount = 0;
 const winpattern = [
@@ -21,9 +21,11 @@ boxes.forEach((box) => {
         if (gameOver) return;
         if (turn0) {
             box.innerText = "O";
+            box.style.color = "#ff6f61";
             turn0 = false;
         } else {
             box.innerText = "X";
+            box.style.color = "#4caf50";
             turn0 = true;
         }
         box.disabled = true;
@@ -73,6 +75,7 @@ resetbtn.addEventListener("click", () => {
     boxes.forEach((box) => {
         box.innerText = "";
         box.disabled = false;
+        box.style.color = "";
     });
     msg.innerText = "Game on!";
     if (msg.classList.contains('animate-winner')) {

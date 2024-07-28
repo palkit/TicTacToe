@@ -2,18 +2,27 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Style for the heading */
 h1 {
     padding-bottom: 30px;
     padding-top: 10px;
+    color: #fff;
+    font-size: 2.5rem;
 }
 
 /* Body styling */
 body {
     text-align: center;
-    background-color: cadetblue;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Container for the message */
@@ -25,13 +34,14 @@ body {
 #msg {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     padding: 10px;
-    background-color: #fff;
-    border: 2px solid #333;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid #fff;
     border-radius: 8px;
     display: inline-block;
 }
+
 .animate-winner {
     animation: scaleUpDown 1s ease;
 }
@@ -61,18 +71,27 @@ body {
     height: 18vmin;
     width: 18vmin;
     border: none;
-    background-color: azure;
+    background: rgba(255, 255, 255, 0.8);
     font-size: 5vmin;
     text-align: center;
     line-height: 18vmin;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.box:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+.box:active {
+    transform: scale(0.95);
 }
 
 /* Reset button styling */
 #resetbtn {
-    background-color:rgb(78, 137, 139);
-    color: rgb(0, 0, 0);
-    /* border: none; */
+    background-color: #ff6f61;
+    color: #fff;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -81,17 +100,18 @@ body {
     margin: 10px 2px;
     cursor: pointer;
     border-radius: 8px;
+    border: none;
     transition: background-color 0.3s ease;
 }
 
 /* Reset button hover effect */
 #resetbtn:hover {
-    background-color: rgb(64, 119, 121)
+    background-color: #ff3d3d;
 }
 
 /* Reset button active effect */
 #resetbtn:active {
-    background-color: #fefefe;
+    background-color: #ff1c1c;
 }
 
 @keyframes scaleUpDown {
