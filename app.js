@@ -15,6 +15,7 @@ const winpattern = [
     [3, 4, 5],
     [6, 7, 8],
 ];
+ 
 
 boxes.forEach((box) => {
     box.addEventListener("click", () => {

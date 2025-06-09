@@ -125,3 +125,17 @@ body {
         transform: scale(1); /* Return to original size */
     }
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #msg {
+    font-size: 1.2rem;
+  }
+
+
+  .box {
+    font-size: 10vmin;
+  }
+}
